@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse, redirect, render
 
 # Create your views here.
 
@@ -16,11 +16,7 @@ layout = """
 
 def index(request):
 
-    html = """
-    <h1>Home</h1>
-    <p>Welcome</p>
-    """
-    return HttpResponse(layout+html)
+    return render(request, "index.html")
 
 
 def hola_mundo(request, redir=0):
@@ -30,11 +26,7 @@ def hola_mundo(request, redir=0):
         # si en vez del path usamos el nombre siempre funcionara aunque cambiemos el path mas adelante
         return redirect('contact', nombre="pepe", apellido="loco")
 
-    html = """
-    <h1>Hola Mundo</h1>
-    <h3>Primeras rutas con Django</h3>
-    """
-    return HttpResponse(layout+html)
+    return render(request, 'hola_mundo.html')
 
 
 def contact(request, nombre="pablo", apellido="viña"):
