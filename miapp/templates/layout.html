@@ -14,7 +14,11 @@
       <li><a href="/contact">Contacto</a></li>
       <li><a href="/projects">Projects</a></li>
     </ul>
-    <div id="content">{% block content %} {% endblock %}</div>
+    <div id="content">
+      {% block content %}
+      <h2>Original content</h2>
+      {% endblock %}
+    </div>
     <footer>&copy;2021 vinjadevix</footer>
   </body>
 </html>
