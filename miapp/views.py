@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 # Create your views here.
 
@@ -23,7 +23,13 @@ def index(request):
     return HttpResponse(layout+html)
 
 
-def hola_mundo(request):
+def hola_mundo(request, redir=0):
+
+    if redir == 1:
+        # return redirect('/contact')
+        # si en vez del path usamos el nombre siempre funcionara aunque cambiemos el path mas adelante
+        return redirect('contact', nombre="pepe", apellido="loco")
+
     html = """
     <h1>Hola Mundo</h1>
     <h3>Primeras rutas con Django</h3>
