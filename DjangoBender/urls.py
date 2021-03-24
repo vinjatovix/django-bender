@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from miapp import views as views_miapp
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hola-mundo', views_miapp.hola_mundo, name='hola_mundo')
 ]
