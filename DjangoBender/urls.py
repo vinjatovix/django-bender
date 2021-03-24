@@ -22,5 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views_miapp.index, name="index"),
     path('hola-mundo', views_miapp.hola_mundo, name='hola_mundo'),
-    path('contact/<str:nombre>', views_miapp.contact, name='contact')
+    path('contact/', views_miapp.contact, name='contact'),
+    path('contact/<str:nombre>/', views_miapp.contact, name='contact'),
+    path('contact/<str:nombre>/<str:apellido>', views_miapp.contact, name='contact')
 ]

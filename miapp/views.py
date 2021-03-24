@@ -31,6 +31,14 @@ def hola_mundo(request):
     return HttpResponse(layout+html)
 
 
-def contact(request, nombre):
-    html = f"Contacto {nombre}"
+def contact(request, nombre="pablo", apellido="viña"):
+
+    # por culpa de los valores por defecto solo se ejecutara el primer caso
+    if nombre and apellido:
+        html = f"<p>{nombre} {apellido}</p>"
+    elif nombre:
+        html = f"<p>{nombre}</p>"
+    else:
+        html = "No hay contacto"
+
     return HttpResponse(layout+html)
