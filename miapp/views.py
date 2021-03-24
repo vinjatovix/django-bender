@@ -2,17 +2,6 @@ from django.shortcuts import render, HttpResponse, redirect, render
 
 # Create your views here.
 
-layout = """
-<h1>Simple Django Demo</h1>
-<hr/>
-<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/hola-mundo">Hola mundo</a></li>
-    <li><a href="/contact">Contacto</a></li>
-    <li><a href="/projects">Projects</a></li>
-</ul>
-"""
-
 
 def index(request):
 
