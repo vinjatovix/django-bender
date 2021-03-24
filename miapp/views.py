@@ -8,6 +8,8 @@ layout = """
 <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/hola-mundo">Hola mundo</a></li>
+    <li><a href="/contact">Contacto</a></li>
+    <li><a href="/projects">Projects</a></li>
 </ul>
 """
 
@@ -26,4 +28,9 @@ def hola_mundo(request):
     <h1>Hola Mundo</h1>
     <h3>Primeras rutas con Django</h3>
     """
+    return HttpResponse(layout+html)
+
+
+def contact(request, nombre):
+    html = f"Contacto {nombre}"
     return HttpResponse(layout+html)
