@@ -20,5 +20,6 @@ from miapp import views as views_miapp
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", views_miapp.index, name="index"),
     path('hola-mundo', views_miapp.hola_mundo, name='hola_mundo')
 ]
