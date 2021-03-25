@@ -21,8 +21,8 @@ from miapp import views as views_miapp
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views_miapp.index, name="index"),
-    path('hola-mundo', views_miapp.hola_mundo, name='hola_mundo'),
-    path('hola-mundo/<int:redir>', views_miapp.hola_mundo, name='hola_mundo'),
+    path('who', views_miapp.who, name='who'),
+    path('who/<int:redir>', views_miapp.who, name='who'),
     path('contact/', views_miapp.contact, name='contact'),
     path('contact/<str:nombre>/', views_miapp.contact, name='contact'),
     path('contact/<str:nombre>/<str:apellido>', views_miapp.contact, name='contact')

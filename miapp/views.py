@@ -8,14 +8,14 @@ def index(request):
     return render(request, "index.html")
 
 
-def hola_mundo(request, redir=0):
+def who(request, redir=0):
 
     if redir == 1:
         # return redirect('/contact')
         # si en vez del path usamos el nombre siempre funcionara aunque cambiemos el path mas adelante
         return redirect('contact', nombre="pepe", apellido="loco")
 
-    return render(request, 'hola_mundo.html')
+    return render(request, 'who.html')
 
 
 def contact(request, nombre="pablo", apellido="viña"):
@@ -28,4 +28,4 @@ def contact(request, nombre="pablo", apellido="viña"):
     else:
         html = "No hay contacto"
 
-    return HttpResponse(layout+html)
+    return HttpResponse(html)

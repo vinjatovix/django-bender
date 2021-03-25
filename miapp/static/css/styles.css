@@ -11,12 +11,13 @@ li {
 body {
   display: grid;
   justify-items: center;
-  gap: 2rem;
 }
-header {
-  width: 1212px;
+.header {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
   height: 140px;
-  background-color: #23282b;
+  background-color: #141618;
   margin: 0 auto;
 }
 
@@ -30,7 +31,8 @@ header {
 #logo img {
   display: block;
 
-  width: 80px;
+  width: 10vw;
+  max-width: 80px;
 }
 
 #logo h1 {
@@ -38,10 +40,66 @@ header {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: normal;
-  color: #2ba977;
+  color: #d1d4d6;
 }
-nav > ul {
+
+.navbar {
+  background-color: black;
+  width: 90vw;
+}
+.navbar__list {
   display: flex;
   flex-direction: row;
   gap: 0.3rem;
+  box-shadow: 0 12px 12px grey;
+}
+.navbar__link {
+  display: block;
+  padding: 1rem;
+  color: #d1d4d6;
+}
+.navbar__link:hover {
+  background-color: white;
+  box-shadow: 0 0 5px inset #d1d4d6;
+  color: black;
+  transition: all 200ms;
+}
+.bar {
+  width: 90vw;
+  display: flex;
+}
+.bar__left {
+  display: block;
+  border-left: 5vw solid transparent;
+  border-top: 10px solid #2b2f30;
+}
+.bar__center {
+  display: block;
+  background-color: #2b2f30;
+  width: 80vw;
+}
+.bar__right {
+  display: block;
+  border-right: 5vw solid transparent;
+  border-top: 10px solid #2b2f30;
+}
+
+.content {
+  max-width: 80vw;
+  width: 100%;
+  border-left: 10px solid black;
+  border-bottom: 10px solid transparent;
+  border-bottom-left-radius: 13px;
+  align-self: flex-end;
+  padding: 1rem;
+  display: grid;
+}
+
+.footer {
+  border: 1px solid black;
+  width: 100vw;
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
 }
